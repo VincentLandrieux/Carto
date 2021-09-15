@@ -1,0 +1,17 @@
+{
+    "name": "Carto",
+    "short_name": "carto",
+    "description": "PWA map",
+    "icons": [
+      {
+        "src": "images/icon-200x200.png",
+        "sizes": "200x200",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "theme_color": "#FF4500",
+    "background_color": "#fefefe"
+  }
+  

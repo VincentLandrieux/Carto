@@ -1,0 +1,19 @@
+{
+  "name": "carto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./src/styles:./",
+    "esbuild": "esbuild ./src/scripts/script.js --outdir=./ --bundle --watch",
+    "build": "esbuild ./src/scripts/script.js --outdir=./ --bundle --minify --sourcemap & sass ./src/styles:./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.12.28",
+    "sass": "^1.41.0"
+  }
+}
