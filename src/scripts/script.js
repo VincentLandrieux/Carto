@@ -259,7 +259,7 @@ canvas.addEventListener('touchstart', (e) => {
     const bcr = e.target.getBoundingClientRect();
     mouseX = e.targetTouches[0].clientX - bcr.x;
     mouseY = e.targetTouches[0].clientY - bcr.y;
-});
+}, false);
 canvas.addEventListener('touchmove', (e) => {
     e.preventDefault();
 
@@ -268,7 +268,7 @@ canvas.addEventListener('touchmove', (e) => {
     e.offsetY = e.targetTouches[0].clientY - bcr.y;
 
     mapMove(e);
-});
+}, false);
 
 locBtn.addEventListener('click', () => {
     if(watchID){
