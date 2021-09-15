@@ -248,10 +248,26 @@ window.addEventListener('resize', initCanvas);
 canvas.addEventListener('mousedown', (e) => {
     mouseX = e.offsetX;
     mouseY = e.offsetY;
+
     canvas.addEventListener('mousemove', mapMove);
 });
 document.addEventListener('mouseup', () => {
     canvas.removeEventListener('mousemove', mapMove);
+});
+
+canvas.addEventListener('touchstart', (e) => {
+    const bcr = e.target.getBoundingClientRect();
+    mouseX = e.targetTouches[0].clientX - bcr.x;
+    mouseY = e.targetTouches[0].clientY - bcr.y;
+});
+canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+
+    const bcr = e.target.getBoundingClientRect();
+    e.offsetX = e.targetTouches[0].clientX - bcr.x;
+    e.offsetY = e.targetTouches[0].clientY - bcr.y;
+
+    mapMove(e);
 });
 
 locBtn.addEventListener('click', () => {
